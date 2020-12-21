@@ -1,0 +1,8 @@
+RewriteEngine On 
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?owner.mini-carello\.com
+RewriteRule ^(.*)$ https://owner.mini-carello.com/$1 [R,L]
+
+RewriteEngine on
+RewriteCond %{REQUEST_URI} !^public
+RewriteRule ^(.*)$ public/$1 [L]
